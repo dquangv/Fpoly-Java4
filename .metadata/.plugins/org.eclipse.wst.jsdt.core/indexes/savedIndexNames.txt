@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\Users\Quang\OneDrive - FPT Polytechnic\Desktop\fpl\hk5\java4\official\lab\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3275444230.index
+3466956860.index
+3907586938.index
+2203599443.index
+3848135755.index
+349776496.index
+778956103.index

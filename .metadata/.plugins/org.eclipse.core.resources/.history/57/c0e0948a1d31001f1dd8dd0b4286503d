@@ -1,0 +1,23 @@
+package com.poly.servlet;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet({"/tam-giac", "/dien-tich","/chu-vi"})
+public class TamGiacServlet extends HttpServlet {
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp)  throws ServletException, IOException {
+		req.getRequestDispatcher("/views/tam-giac.jsp");
+	}
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		double a = Double.parseDouble(req.getParameter("a"));
+		
+	}
+}
