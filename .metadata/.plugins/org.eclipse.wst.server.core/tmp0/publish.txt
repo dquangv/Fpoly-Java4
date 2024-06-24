@@ -1,3 +1,4 @@
 #Tomcat publish data
-#Sun Jun 23 21:25:54 ICT 2024
+#Mon Jun 24 22:50:19 ICT 2024
 org.eclipse.jst.jee.server\:fpoly=E\:\\Tomcat\\apache-tomcat-9.0.87\\wtpwebapps\\fpoly
+org.eclipse.jst.jee.server\:lab1=E\:\\Tomcat\\apache-tomcat-9.0.87\\wtpwebapps\\lab1
