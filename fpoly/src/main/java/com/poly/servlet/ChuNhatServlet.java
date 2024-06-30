@@ -27,4 +27,5 @@ public class ChuNhatServlet extends HttpServlet {
 		
 		req.getRequestDispatcher("/views/chunhat/ket-qua.jsp").forward(req, resp);
 	}
+	
 }

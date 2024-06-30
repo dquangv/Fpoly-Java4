@@ -1,7 +1,10 @@
 package com.poly.servlet;
 
+import java.io.File;
+
 public class Mail {
-	private String sender, receiver, subject, body, photo;
+	private String sender, receiver, subject, body;
+	private File file;
 
 	public String getSender() {
 		return sender;
@@ -35,11 +38,13 @@ public class Mail {
 		this.body = body;
 	}
 
-	public String getPhoto() {
-		return photo;
+	public File getFile() {
+		return file;
 	}
 
-	public void setPhoto(String photo) {
-		this.photo = photo;
+	public void setFile(File file) {
+		this.file = file;
 	}
+
+
 }

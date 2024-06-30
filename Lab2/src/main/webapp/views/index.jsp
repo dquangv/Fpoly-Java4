@@ -4,9 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Bài Lab 2</title>
 </head>
 <body>
-	<h1>Hello world</h1>
+	<h1>Bài Lab 2</h1>
+	<hr>
+	<a href="tam-giac">Bài 1</a> || <a href="bai2.jsp">Bài 2</a> || <a href="bai2">Bài 2 Servlet</a>
 </body>
 </html>

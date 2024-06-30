@@ -31,6 +31,7 @@ public class DangKyServlet extends HttpServlet {
 		String hobby = "";
         if (hobbies != null) {
         	hobby = String.join(", ", hobbies);
+        	hobby += ".";
         }
 		
 		System.out.println(">>name: "+name);

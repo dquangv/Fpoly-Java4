@@ -4,25 +4,31 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Send mail</title>
 </head>
 <body>
 	<h1>Send Mail</h1>
 	
-	<form action="/fpoly/send-mail" enctype="multipart/form-data">
-		<mark>${message}</mark>
+	<form method="post" action="/fpoly/send-mail" enctype="multipart/form-data">
+		<mark>${message}</mark><br>
 		
 		<span>From: </span>
-		<input name="sender"><br>
+		<input name="sender" value="quangvdps36680@fpt.edu.vn"><br>
 		
 		<span>To: </span>
-		<input name="receiver"><br>
+		<input name="toReceiver"><br>
+		
+		<span>CC: </span>
+		<input name="ccReceiver"><br>
+		
+		<span>BCC: </span>
+		<input name="bccReceiver"><br>
 		
 		<span>Subject: </span>
 		<input name="subject"><br>
 		
 		<span>Body: </span>
-		<textarea rows="3" cols="30" name="body"></textarea>
+		<textarea rows="3" cols="30" name="body"></textarea><br>
 		
 		<span>File: </span>
 		<input type="file" name="file"><br>
