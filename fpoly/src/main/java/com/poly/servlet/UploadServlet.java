@@ -18,26 +18,26 @@ public class UploadServlet extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.getRequestDispatcher("/views/upload-file/form.jsp").forward(req, resp);
 	}
-	
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		File dir = new File(req.getServletContext().getRealPath("/files"));
-		
+
 		if (!dir.exists()) {
 			dir.mkdirs();
 		}
-		
+
 		Part photo = req.getPart("photo_file");
 		File photoFile = new File(dir, photo.getSubmittedFileName());
 		photo.write(photoFile.getAbsolutePath());
-		
+
 		Part doc = req.getPart("doc_file");
 		File docFile = new File(dir, doc.getSubmittedFileName());
 		doc.write(docFile.getAbsolutePath());
-		
+
 		req.setAttribute("img", photoFile);
 		req.setAttribute("doc", docFile);
-		
+
 		req.getRequestDispatcher("views/upload-file/result.jsp").forward(req, resp);
 	}
 }

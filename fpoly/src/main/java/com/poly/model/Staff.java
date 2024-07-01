@@ -1,4 +1,4 @@
-package com.poly.servlet;
+package com.poly.model;
 
 import java.util.Date;
 

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,18 +20,14 @@
 			</div>
 			<img class="pull-right position-absolute"
 				style="display: inline-block; width: 450px; height: 200px; top: 0; right: 0;"
-				src="../../files/header-object.png" alt="">
+				src="${pageContext.request.contextPath}/files/header-object.png" alt="">
 		</header>
 
 		<%@include file="menu.jsp"%>
-		
+
 		<div class="row">
 			<article class="col-sm-9">
-				<jsp:include page="item.jsp">
-					<jsp:param value="Tên sản phẩm n" name="name" />
-					<jsp:param value="Hình sản phẩm n" name="image" />
-					<jsp:param value="Giá sản phẩm n" name="price"/>
-				</jsp:include>
+				<jsp:include page="item.jsp"/>
 			</article>
 			<aside class="col-sm-3">
 				<div class="poly-cart">
@@ -92,6 +89,14 @@
 		</div>
 
 	</div>
+
+	<footer class="row">
+		<div class="panel panel-default">
+			<div class="panel-heading text-center">
+				<p>FPT Polytechnic &copy; 2017. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
 
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

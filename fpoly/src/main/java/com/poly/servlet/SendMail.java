@@ -2,7 +2,6 @@ package com.poly.servlet;
 
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 import java.nio.file.Files;
 import java.util.Properties;
 
@@ -11,7 +10,6 @@ import javax.activation.FileDataSource;
 import javax.mail.Authenticator;
 import javax.mail.Message;
 import javax.mail.MessagingException;
-import javax.mail.Multipart;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
 import javax.mail.Transport;
@@ -20,7 +18,6 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
-import javax.mail.internet.NewsAddress;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -28,8 +25,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
-
-import org.apache.commons.beanutils.BeanUtils;
 
 @MultipartConfig
 @WebServlet("/send-mail")
@@ -50,7 +45,7 @@ public class SendMail extends HttpServlet {
 //		} catch (InvocationTargetException e) {
 //			e.printStackTrace();
 //		}
-//		
+//
 //		mail.setSender("quangvdps36680@fpt.edu.vn");
 
 		String toReceiver = req.getParameter("toReceiver");
@@ -68,6 +63,7 @@ public class SendMail extends HttpServlet {
         p.put("mail.debug", "true");
 
 		Session session = Session.getInstance(p, new Authenticator() {
+			@Override
 			protected PasswordAuthentication getPasswordAuthentication() {
 				String username = "quangvdps36680@fpt.edu.vn";
 				String password = "ojtvgwvpjdwpraib";
@@ -105,13 +101,13 @@ public class SendMail extends HttpServlet {
 //			Multipart multipart = new MimeMultipart();
 //			multipart.addBodyPart(part);
 //			message.setContent(multipart);
-			
+
 			MimeMultipart mimeMultipart = new MimeMultipart();
 			MimeBodyPart mimeBodyPart = new MimeBodyPart();
 			mimeBodyPart.setContent(body,"text/html; charset=utf-8");
 			mimeMultipart.addBodyPart(mimeBodyPart);
 			mimeMultipart.addBodyPart(part);
-			
+
 			message.setContent(mimeMultipart);
 
 			Transport.send(message);

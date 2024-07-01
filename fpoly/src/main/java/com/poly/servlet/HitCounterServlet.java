@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 public class HitCounterServlet extends HttpServlet{
 	int count;
 	Path path = Paths.get("C:\\Users\\Quang\\OneDrive - FPT Polytechnic\\Desktop\\fpl\\hk5\\java4\\official\\lab\\fpoly\\count.txt");
-	
+
 	@Override
 	public void init() throws ServletException {
 		try {
@@ -27,7 +27,7 @@ public class HitCounterServlet extends HttpServlet{
 			e.printStackTrace();
 		}
 	}
-	
+
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		count++;
@@ -35,7 +35,7 @@ public class HitCounterServlet extends HttpServlet{
 		req.setAttribute("count", count);
 		req.getRequestDispatcher("/views/hit-counter.jsp").forward(req, resp);
 	}
-	
+
 	@Override
 	public void destroy() {
 		try {
