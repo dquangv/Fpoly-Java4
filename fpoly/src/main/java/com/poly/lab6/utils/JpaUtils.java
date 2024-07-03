@@ -1,4 +1,4 @@
-package com.poly.lab5.utils;
+package com.poly.lab6.utils;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -8,7 +8,7 @@ public class JpaUtils {
 	private static EntityManagerFactory factory;
 	
 	static public EntityManager getEntityManager() {
-		if (factory == null || !factory.isOpen()) {
+		if(factory == null || !factory.isOpen()) {
 			factory = Persistence.createEntityManagerFactory("PolyOE");
 		}
 		
@@ -16,7 +16,7 @@ public class JpaUtils {
 	}
 	
 	static public void shutdown() {
-		if (factory != null && factory.isOpen()) {
+		if(factory != null && factory.isOpen()) {
 			factory.close();
 		}
 		
