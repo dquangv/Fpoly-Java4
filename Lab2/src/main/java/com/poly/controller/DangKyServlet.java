@@ -34,13 +34,6 @@ public class DangKyServlet extends HttpServlet {
         	hobby += ".";
         }
 
-		System.out.println(">>name: "+name);
-		System.out.println(">>password: "+password);
-		System.out.println(">>gender: "+gender);
-		System.out.println(">>married: "+married);
-		System.out.println(">>country: "+country);
-		System.out.println(">>note: "+note);
-
 		req.setAttribute("name", name);
 		req.setAttribute("password", password);
 		req.setAttribute("gender", gender ? "Nam" : "Nữ");

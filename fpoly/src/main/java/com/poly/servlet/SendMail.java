@@ -32,7 +32,8 @@ public class SendMail extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.getRequestDispatcher("/views/send-mail.jsp").forward(req, resp);
+		req.setAttribute("view", "/views/send-mail.jsp");
+		req.getRequestDispatcher("/views/index.jsp").forward(req, resp);
 	}
 
 	@Override
@@ -123,7 +124,8 @@ public class SendMail extends HttpServlet {
 			e.printStackTrace();
 			req.setAttribute("message", "Error processing file: " + e.getMessage());
 		}
-
-		req.getRequestDispatcher("/views/send-mail.jsp").forward(req, resp);
+		
+		req.setAttribute("view", "/views/send-mail.jsp");
+		req.getRequestDispatcher("/views/index.jsp").forward(req, resp);
 	}
 }
