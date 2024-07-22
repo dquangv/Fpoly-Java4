@@ -6,6 +6,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\Quang\OneDrive - FPT Polytechnic\Desktop\fpl\hk5\java4\official\lab"/>
 			<item value="C:\Users\Quang\OneDrive - FPT Polytechnic\Desktop\fpl\hk5\java4\Thuan\SOF3011-Java4\LMS\PS26548_NguyenNgocMinhThuan_Lab1"/>
 		</list>
 	</section>

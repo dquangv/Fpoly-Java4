@@ -49,4 +49,7 @@
     <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="utils.JpaUtils"/>
+    <fullyQualifiedTypeName name="dao.UserDAO"/>
+    <fullyQualifiedTypeName name="bean.User"/>
 </qualifiedTypeNameHistroy>
