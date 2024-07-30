@@ -128,5 +128,29 @@ public class UserDAO {
 
 		return entity;
 	}
+	
+	public List<User> findPage(int page, int size) {
+        EntityManager em = JpaUtils.getEntityManager();
+        try {
+            String jpql = "SELECT u FROM User u";
+            TypedQuery<User> query = em.createQuery(jpql, User.class);
+            query.setFirstResult(page * size);
+            query.setMaxResults(size);
+            return query.getResultList();
+        } finally {
+            em.close();
+        }
+    }
+
+    public long count() {
+        EntityManager em = JpaUtils.getEntityManager();
+        try {
+            String jpql = "SELECT COUNT(u) FROM User u";
+            TypedQuery<Long> query = em.createQuery(jpql, Long.class);
+            return query.getSingleResult();
+        } finally {
+            em.close();
+        }
+    }
 
 }

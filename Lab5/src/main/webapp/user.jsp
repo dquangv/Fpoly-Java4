@@ -6,6 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+	rel="stylesheet">
 </head>
 <body>
 	<!-- Thông báo -->
@@ -28,7 +30,15 @@
 		<a href="${url}/index" name="reset">Reset</a>
 	</form>
 
-	<table border="1" style="width: 100%">
+	<table class="table table-bordered table-striped" border="1" style="width: 100%">
+		<thead>
+			<td>Username</td>
+			<td>Password</td>
+			<td>Fullname</td>
+			<td>Email</td>
+			<td>Role</td>
+			<td></td>
+		</thead>
 		<c:forEach var="item" items="${items}">
 			<tr>
 				<td>${item.id}</td>
@@ -41,5 +51,16 @@
 			</tr>
 		</c:forEach>
 	</table>
+
+	<nav aria-label="Page navigation">
+		<ul class="pagination">
+			<c:forEach begin="0" end="${totalPages - 1}" var="i">
+				<li class="page-item ${currentPage == i ? 'active' : ''}"><a
+					class="page-link"
+					href="${pageContext.request.contextPath}/user/index?page=${i}">${i + 1}</a>
+				</li>
+			</c:forEach>
+		</ul>
+	</nav>
 </body>
 </html>

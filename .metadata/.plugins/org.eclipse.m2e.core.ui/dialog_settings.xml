@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="Lab6"/>
 			<item value="Lab5"/>
 			<item value="test_1"/>
 			<item value="PS26548_NguyenNgocMinhThuan_Lab1"/>
@@ -11,6 +12,7 @@
 			<item value="Servlet &amp; JSP"/>
 		</list>
 		<list key="artifactId">
+			<item value="Lab6"/>
 			<item value="Lab5"/>
 			<item value="test_1"/>
 			<item value="PS26548_NguyenNgocMinhThuan_Lab1"/>
